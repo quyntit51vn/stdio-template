@@ -1,0 +1,40 @@
+{
+    "name": "stdio/stdio-template",
+    "description": "STDIO's Template Laravel",
+    "keywords": [
+        "stdio",
+        "stdio template",
+        "repository pattern",
+        "eloquent",
+        "repository",
+        "repositories",
+        "DTO",
+        "Data Transfer Object",
+        "API Resource"        
+      ],
+    "autoload": {
+        "psr-4": {
+            "Stdio\\StdioTemplate\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Blackey",
+            "homepage": "https://stdio.asia",
+            "email": "quy.nt.it.51vn@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Stdio\\StdioTemplate\\StdioServiceProvider"
+            ]
+        },
+        "files": [
+            "stdio/stdio-template/FunctionGlobal.php"
+        ]
+    },
+    "minimum-stability": "dev"
+}

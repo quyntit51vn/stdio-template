@@ -1,0 +1,41 @@
+<?php
+
+namespace {{ namespace }};
+
+use Stdio\StdioTemplate\DTO\BaseDTO;
+
+class {{ class }} extends BaseDTO
+{
+    
+    private $type;
+    const TYPE_LIST = 'LIST';
+    public function __construct($resource, $type = null)
+    {
+        parent::__construct($resource);
+
+        $this->type = $type;
+    }
+
+    /**
+     * Transform the resource collection into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function toArray($request)
+    {
+        switch ($this->type) {
+            case self::TYPE_LIST:
+                return $this->toList();
+            default:
+                return parent::toArray($request);
+        }
+    }
+
+    private function toList()
+    {
+        return $this->get([
+            // list key
+        ], $this->resource);
+    }
+}

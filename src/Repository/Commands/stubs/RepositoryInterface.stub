@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+use Stdio\StdioTemplate\Repository\Contracts\RepositoryInterface;
+/**
+ * Interface {{ class }}.
+ *
+ * @package {{ namespace }}
+ */
+interface {{ class }} extends RepositoryInterface
+{
+    //
+}

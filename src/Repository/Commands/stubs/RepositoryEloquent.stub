@@ -1,0 +1,28 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespaceModel }};
+use Illuminate\Container\Container as App;
+use Stdio\StdioTemplate\Repository\Eloquent\BaseRepository;
+use App\Repositories\Contracts\{{ interface }}Interface;
+
+class {{ class }} extends BaseRepository implements {{ interface }}Interface
+{
+    // super parent and can use Repository another
+    public function __construct(App $app)
+    {
+        parent::__construct($app);
+    }
+
+    /**
+     * Specify Model class name
+     *
+     * @return string
+     */
+    public function model()
+    {
+        return {{ model }}::class;
+    }
+
+}
