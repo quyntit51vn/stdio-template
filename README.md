@@ -9,7 +9,7 @@ To get started with Base STDIO's Template: Repository, DTO(Data Transfer Object)
 Next, you are ready to use repository. If you want create repository with Model corresponding(example:UserRepository), run commnand line
 
 ```bash
-php artisan make:repostitory UserRepository
+php artisan make:repository UserRepository
 ```
 
 It will create UserRepository + UserInterface.
